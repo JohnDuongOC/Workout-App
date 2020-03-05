@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Workout Tracker</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="far fa-list-alt text-primary" aria-hidden="true"></i>
+        <span class="text-primary">Workout</span>Tracker
+      </h1>
+      <form action="" id="exercise-form">
+        <div class="form-group row">
+          <div class="col-12">
+            <label for="exerciseN">Exercise Name</label>
+            <input
+              type="text"
+              id="exerciseN"
+              class="form-control"
+              placeholder="Squats"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="reps">Reps</label>
+            <input
+              type="number"
+              id="reps"
+              class="form-control"
+              placeholder="3"
+            />
+          </div>
+          <div class="col-6">
+            <label for="sets">Sets</label>
+            <input
+              type="number"
+              id="sets"
+              class="form-control"
+              placeholder="10"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="weight">Weight</label>
+            <input
+              type="number"
+              id="weight"
+              class="form-control"
+              placeholder="135"
+            />
+          </div>
+          <div
+            class="btn-group btn-group-toggle align-self-end col-6 "
+            id="weightConverter"
+            data-toggle="buttons"
+          >
+            <label class="btn btn-outline-primary active">
+              <input
+                type="radio"
+                name="lb"
+                id="convertToLB"
+                autocomplete="off"
+                checked=""
+              />
+              LB (Pound)
+            </label>
+            <label class="btn btn-outline-primary">
+              <input
+                type="radio"
+                name="kg"
+                id="convertToKG"
+                autocomplete="off"
+              />
+              KG (Kilogram)
+            </label>
+          </div>
+        </div>
+
+        <input
+          type="submit"
+          value="Add Exercise"
+          class="btn btn-primary btn-lg btn-block"
+        />
+      </form>
+
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Exercise Name</th>
+            <th>Reps x Sets</th>
+            <th>Weight</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="exercise-list"></tbody>
+      </table>
+    </div>
+  </body>
+  <!-- Litera Bootswatch Theme -->
+  <link
+    rel="stylesheet"
+    href="https://bootswatch.com/4/litera/bootstrap.min.css"
+  />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script
+    src="https://kit.fontawesome.com/b546b89685.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="app.js"></script>
+</html>
